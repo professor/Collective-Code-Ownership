@@ -56,6 +56,19 @@
 \newcommand{\participantQuote}[1]{\textit{``#1''}}
 \newcommand{\singleQuote}[1]{`#1'}
 \newcommand{\emphasis}[1]{\emph{#1}}
+
+%spider chart
+% \usepackage[utf8]{inputenc} 
+% \usepackage[T1]{fontenc}
+% \usepackage[upright]{fourier} 
+% \usepackage[usenames,dvipsnames]{xcolor}
+% \usepackage{tkz-kiviat,numprint,fullpage} 
+% \usetikzlibrary{arrows}
+
+\usepackage{pdflscape}
+\usepackage{rotating}
+
+
 \begin{document}
 
 % Copyright
@@ -154,17 +167,17 @@ Factors Affecting Team Code Ownership
 \maketitle
 \begin{abstract}
 
-\textit{Context:} In existing literature, collective code ownership describes the policy that anyone can modify any part of the project. However, simply adopting a policy is not sufficient for team members to be able to modify any part of the code, and many factors affect the team's sense of ownership. 
+\textit{Context:} Team code ownership is a software development practice where any team member can modify any part of a project. However, many factors beyond official policy affect developer's sense of ownership. 
 
-\textit{Objective:} The purpose of this paper is to understand the factors that foster and decrease a team's sense of code ownership.
+\textit{Objective:} The purpose of this paper is to understand the factors that affect a team's sense of code ownership.
 
-\textit{Method:} We followed Constructivist Grounded Theory. The primary researcher conducted participant-observation of several software development projects at Pivotal, and interviewed 21 software engineers, interaction designers, and product managers. The researcher iteratively sampled and analyzed until achieving theoretical saturation.
+\textit{Method:} Follow Constructivist Grounded Theory, the first author conducted participant-observation of several software development projects, and interviewed 21 software engineers, interaction designers, and product managers. Iterating between theoretical sampling and analysis continued until achieving theoretical saturation.
 
-\textit{Results:} This paper examines factors that affect team code ownership including code context, code contribution, code quality, product quality, and team belonging; and identifies several possible threats to ownership including increasing team size, increasing product apathy, increasing team apathy, and increasing code apathy, and breakdowns in pair programming threaten a team's sense of code ownership. 
+\textit{Results:} Team code ownership is a feeling. Developers feel team code ownership more when they understand the system context, they have contributed to the code in question, perceived code quality is high, they are highly engaged with the product/project, and perceived team cohesion is high.  
 
-\textit{Limitations:} While the results are highly relevant to Pivotal, the outcomes may not be transferable to other software development organizations with different software development cultures.
+\textit{Limitations:} Outcomes of grounded theory research are not statistically generalizable to defined populations, and may not apply to organizations with different software development cultures.
 
-\textit{Conclusion:}  Achieving team code ownership requires significant effort for a team. While the policies and practices align a team towards a high sense of collective code ownership, there are factors that can weaken it. 
+\textit{Conclusion:} Team code ownership is rooted in numerous cognitive, emotional, contextual and technical factors and cannot be achieved simply by policy. 
 
 \end{abstract}
 
@@ -227,7 +240,19 @@ Sustainable software development
 
 
 
-
+% \begin{tikzpicture}
+% \tkzKiviatDiagram[scale=1.25,label distance=.5cm,
+%         radial  = 5,
+%         gap     = 1,  
+%         lattice = 5]{McCabe,LOC,Live Variables,Halstead N,Variablenspanne}
+% \tkzKiviatLine[thick,color=blue,mark=none,
+%               fill=blue!20,opacity=.5](3,3.5,3,3.5,3)
+% \tkzKiviatLine[thick,color=darkgray,
+%               fill=green!20,opacity=.5](0.5,1,0.5,0.75,1) 
+% \tkzKiviatLine[ultra thick,mark=ball,
+%                  mark size=4pt,color =Maroon](2,3.75,1,1.5,2)    
+% \tkzKiviatGrad[prefix=,unity=100,suffix=\ \texteuro](1)  
+% \end{tikzpicture}
 
 
 
