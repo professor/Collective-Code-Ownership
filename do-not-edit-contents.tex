@@ -1,4 +1,3 @@
-
 \section{Introduction}
 \textit{Team Code Ownership} (which is similar to \textit{Collective Code Ownership} and \textit{Shared Code}) is a software development practice where any developer on a team has the right to change any of the team's code. Team code ownership is intended to accelerate development by allowing any developer to fix any team bug and by mitigating delays due to vacations, illness and other absence \cite{ExtremeProgramming2004}.
  
@@ -73,13 +72,14 @@ The primary researcher also collected field notes while working as an engineer. 
 
 \subsection{Research Context: Pivotal}
 \label{ResearchContext}
-Pivotal is a large American company with 16 offices around the world. One of its divisions is Pivotal Labs. Pivotal Lab's mission is to both deliver highly-crafted software products and provide a transformative experience for their client's engineering cultures. To change a developer's way of working, Pivotal combines the client's software engineers with Pivotal's engineers at a Pivotal office where they can experience Extreme Programming in an environment conducive for agile development. For startups, Pivotal might be the first engineers working on the project. For enterprise clients, Pivotal provides additional engineering resources to accomplish new business goals. 
+Pivotal is a large American company with 16 offices around the world. One of its divisions is Pivotal Labs. Pivotal Lab's mission is to both deliver highly-crafted software products and provide a transformative experience for their client's engineering cultures. To change a developer's way of working, Pivotal combines the client's software engineers with Pivotal's engineers at a Pivotal office where they can experience Extreme Programming in an environment conducive for agile development. % Tmp for 6 pages    For startups, Pivotal might be the first engineers working on the project. For enterprise clients, Pivotal provides additional engineering resources to accomplish new business goals. 
 
 Common team sizes are six developers plus an interaction designer and a product manager. In the history of the Palo Alto office, the number of developers on a project ranges from 2 to 28. Larger projects are organized into smaller coordinating teams with one product manager per team and one or two interaction designers per team.
 
-Commonly utilized technologies include Angular, Android, backbone, iOS, Java, Rails, React, and Spring often deployed onto Pivotal's Cloud Foundry. 
+% Tmp to fit in 6 pages
+%Commonly utilized technologies include Angular, Android, backbone, iOS, Java, Rails, React, and Spring often deployed onto Pivotal's Cloud Foundry. 
 
-Pivotal Labs has followed Extreme Programming \cite{ExtremeProgramming2004} since the late 1990's. While each team is autonomous in making its own decisions as to what is best for a particular project, the company culture strongly suggests following all of the core practices of Extreme Programming. This includes Pair Programming, Test Driven Development, Weekly Retrospectives, Daily Stand-ups, Prioritized Backlog, Whole Team ownership of the project and code base, plus Kanban's notion of work flowing through people.
+Pivotal Labs has followed Extreme Programming \cite{ExtremeProgramming2004} since the late 1990's. While each team is autonomous in making its own decisions as to what is best for a particular project, the company culture strongly suggests following all of the core practices of Extreme Programming. %This includes Pair Programming, Test Driven Development, Weekly Retrospectives, Daily Stand-ups, Prioritized Backlog, Whole Team ownership of the project and code base, plus Kanban's notion of work flowing through people.
 
 \section{Team Code Ownership}
 \label{TeamCodeOwnership}
@@ -226,7 +226,7 @@ As a developer works on the code base, the developer's system context level incr
 
 This could happen, for instance, during a pair programming breakdown. When the pairing experience breaks down, one person drives the code development while the partner passively watches. (We call this dynamic \quotes{Performance Pair Programming,} when one developer plows through a story and stops listening to the developer's partner.)  When one person is writing all the code, individual code ownership replaces team code ownership.  
 
-In one situation, the partner took over and ignored the participant's input. The participant reflected, \participantQuote{I did not understand what was really going on. I wouldn't be able to explain deeply what we had done. I wouldn't be able to maintain it. I didn't really write it, so I feel very little ownership of it.} 
+In one situation, the partner took over and ignored the participant's input. The participant reflected, \participantQuote{I would not be able to explain deeply what we had done. I would not be able to maintain it. I didn't really write it, so I feel very little ownership of it.} 
 
 Ideally, Pair Programming is a collaborative experience where both individuals are unable to tell who wrote which portions of the code. 
 
@@ -261,7 +261,7 @@ The team wants to feel \quotes{pride in improving code quality.}  It feels good 
 
 \textbf{Purpose:} Engineers want to create products that matter to the user. Delivering a product that matters to someone satisfies the self-identity motivation of psychological ownership.
 
-\textbf{Threat: Ignoring user feedback.} When product ignores feedback from user research and usability testing, developers may perceive that certain features or the entire product might not satisfy the user's needs. Developer motivation and engagement can decrease when developers perceive they are building a feature that users have explicitly said they do not want yet is implemented to solve a business goal. 
+\textbf{Threat: Ignoring user feedback.} When product ignores feedback from user research and usability testing, developers may perceive that certain features or the entire product might not satisfy the user's needs. Developer motivation and engagement can decrease when developers perceive they are building a feature that users have explicitly said they do not want yet is built to solve a business goal. 
 
 \textbf{Threat: Ignoring developers feedback about the product.} Pivotal's balanced team approach is founded on collaboration between product managers, interaction designers, and developers. When product managers, or other stakeholders, ignore feedback from developers, developers can begin to feel less ownership in the product, and in turn, be less motivated to work on the project. 
 
@@ -295,18 +295,15 @@ Some developers effortlessly make the transition to team code ownership. They im
 
 Others may struggle with team code ownership for several reasons:
 
-% \begin{itemize}  
-%\item 
-1) Developers may struggle to transition to a caretaker mindset.  In one interview, a software engineer struggled to describe the developer's relationship with the code on a very challenging project and settled in on the caretaker metaphor: \participantQuote{Sometimes I kind of feel like a janitor to [the code base].  Maybe caretaker would be better. Yeah, probably caretaker. I feel like a janitor just cleans up messes, but a caretaker makes things better.} 
+\begin{itemize}  
 
-%\item 
-2) A developer may be distraught at \participantQuote{seeing my work slowly removed from the app.} 
+\item Developers may struggle to transition to a caretaker mindset.  In one interview, a software engineer struggled to describe the developer's relationship with the code on a very challenging project and settled in on the caretaker metaphor: \participantQuote{Sometimes I kind of feel like a janitor to [the code base].  Maybe caretaker would be better. Yeah, probably caretaker. I feel like a janitor just cleans up messes, but a caretaker makes things better.} 
 
-%\item 
-3) Developers can no longer take pride in functionality that they exclusively develop.
+\item A developer may be distraught at \participantQuote{seeing my work slowly removed from the app.} 
 
-%\item 
-4) Existing knowledge silos, which hinder team code ownership, may be slow to break down.
+\item Developers can no longer take pride in functionality that they exclusively develop.
+
+\item Existing knowledge silos, which hinder team code ownership, may be slow to break down.
  
 \end{itemize}
 
@@ -338,9 +335,6 @@ This paper reports results from a participant-observation, constructivist ground
 
 2) Meanwhile, both discussions with and observations of participants suggest five factors associated with strong feelings team code ownership. Pivotal developers more acutely feel team code ownership when 1) they understand the system context; 2) they contribute to the code in question; 3) they perceive code quality is high; 4) they perceive the product will satisfy the user needs; and 5) they perceive team cohesion is high.   
 
-3) Moreover, diverse events and trends can undermine sense of ownership, including:  increasing knowledge silos, increasing code base size, increasing team size, inability to contribute, pressure to deliver and deprioritizing continuous refactoring, ignoring user feedback, ignoring developers feedback on product, and distancing a developer from the team. 
+3) Moreover, diverse events and trends can undermine sense of ownership, including:  increasing knowledge silos, increasing code base size, increasing team size, inability to contribute, pressure to deliver and deprioritizing continuous refactoring, ignoring user feedback, ignoring developers feedback, and distancing a developer from the team. 
 
 In conclusion, Pivotal's developers find team code ownership highly advantageous; however, transitioning to a team code ownership model is easier for some than others. Some agile practices including continuous pair programming, overlapping pair rotation, continuous refactoring, and testing appear to help. Promising angles for future research include more nuanced explorations of the code ownership spectrum, further exploration of the roles of emotion and identity, as well as developing specific practices for facilitating ownership transitions. 
-
-\section{Acknowledgement}
-Thank you to Rob Mee, David Goudreau, Ryan Richard, and Zach Larson for making this research possible.
