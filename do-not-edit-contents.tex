@@ -45,7 +45,7 @@ $\bullet$ Caring about Code Quality  & $\bullet$ Avoid Technical Debt      & $\b
 
 \subsection{Sustainable Software Development}
 \label{SustainableSoftwareDevelopmentTheory}
-We describe the theory of Sustainable Software Development through Team Code Ownership in the paper by the same name \cite{SustainableSoftwareDevelopment} and summarize it in Table \ref{SustainableSoftwareDevelopmentTable}. The theory describes how teams can continue to deliver value in spite of team disruptions. The theory is a collection of synergistic principles, policies, and practices encouraging a positive attitude towards team disruption, knowledge sharing and continuity, as well as caring about code quality. The practices actively remove knowledge silos and caretake the code so that any pair can work on any story in the backlog. 
+We describe the theory of Sustainable Software Development through Overlapping Pair Rotation in the paper by the same name \cite{SustainableSoftwareDevelopment} and summarize it in Table \ref{SustainableSoftwareDevelopmentTable}. The theory describes how teams can continue to deliver value in spite of team disruptions. The theory is a collection of synergistic principles, policies, and practices encouraging a positive attitude towards team disruption, knowledge sharing and continuity, as well as caring about code quality. The practices actively remove knowledge silos and caretake the code so that any pair can work on any story in the backlog. 
 
 \subsection{Psychological Ownership}
 Psychological ownership refers to \quotes{the feeling of possessiveness and of being psychologically tied to an object} \cite{Pierce2001}. Targets of ownership, whether physical or immaterial, become the extension of one's self. \quotes{what is mine becomes (in my feelings) part of ME} \cite{Isaacs1933}. Ownership can be attached to a part or the whole. Psychological ownership occurs when the object becomes part of the psychological owner's identity. Psychological ownership answers the question, \quotes{What do I feel is mine?}
@@ -86,7 +86,47 @@ Pivotal Labs has followed Extreme Programming \cite{ExtremeProgramming2004} sinc
 
 In the literature, collective code ownership is often treated as a policy statement. In this case, simply claiming that \quotes{anyone can modify any piece the code} was not sufficient to engender willingness to modify any file. Rather, ownership is an emotional or qualitative attribute that ties all developers on the team to the project and code base. It is a spectrum where, on one side, each individual has ownership of only their code, and on the other side, everyone on the team owns the entire code base. Some events appear to erode the team's sense of ownership over the project's duration, while some practices appear to counteract these erosions. This section details the five factors that appear most related to team code ownership and examples of events or tendencies that erode it. 
 
+% \begin{table*}[]
+% \renewcommand{\arraystretch}{1.5}
+% \centering
+% \caption{Factors affecting Team Code Ownership}
+% \label{TeamCodeOwnerhipFactors}
+% \begin{tabular}{|p{1.3in}|p{2.6in}|p{2.6in}|}
+% \hline
+% Factor & Definition & Purpose \\
+% \hline
+% System Context
+% & System context is the knowledge and situational awareness about the code, including the discourse that surrounds the code. %System context includes understanding how existing features have been implemented, understanding existing design decisions, understanding underlying technologies and frameworks, and understanding how features solve the user's need.
+% & Developing a deep knowledge of the system exercises the \quotes{intimately knowing the target} path of psychological ownership.
+% \\ \hline
+% Code Contribution
+% & Code contribution is the portion of the code that a given developer has worked on.
+% & Personally contributing to the code base increases a developer's sense of ownership by exercising \quotes{investing in the target} path of psychological ownership. % As a developer works on the code base, the developer's system context level increases. While code contribution level influences the system context level, it is not necessary related: developers might learn about the code through other means different from direct contribution, including conversations at stand-up, impromptu team huddles, or a pair saying \participantQuote{Check out what we did yesterday.}
+% \\ \hline
+% Code Quality
+% & Code quality relates to how well the code satisfies the project's desirable quality attributes. Desirable quality attributes might include design qualities, performance, reliability, scalability, security,  testability, and usability \cite{Meier2009}.
+% & %How well the code satisfies the project's desirable quality attributes affects the team's sense of ownership. 
+% A high quality product satisfies the self-identity motivation of psychological ownership. Developers might not want to be identified with a low quality product.
+% %Low quality products also tend to involve a disproportionate amount of bug fixes. Developers need a balance between creating new features and fixing bugs each week. Working only on bugs for weeks affects their sense of ownership.
+% \\ \hline
+% Product Fit
+% & Product fit is believing that the product will satisfy the user's needs.
+% & Engineers want to create products that matter to the user. Delivering a product that matters to someone satisfies the self-identity motivation of psychological ownership.
+% \\ \hline
+% Team Cohesion
+% & Team cohesion is the degree to which team members identify as part of the team, stick together through adversity and take pride in the team's accomplishments \cite{Bollen1990Perceived, Beal2003Cohesion, Whitworth2007Motivation}.
+% & Team cohesion satisfies the \quotes{having a place} motivation of psychological ownership.
+% \\ \hline
+% \end{tabular}
+% \end{table*}
+
+
+
+
 % (Table \ref{TeamCodeOwnerhipFactors}). 
+
+
+
 
 
 % \begin{table}[]
@@ -99,7 +139,7 @@ In the literature, collective code ownership is often treated as a policy statem
 % System Context \\
 % Code Contribution \\
 % Code Quality \\
-% Product Engagement \\
+% Product Fit \\
 % Team Cohesion \\
 % \hline
 % \end{tabular}
@@ -131,8 +171,8 @@ In the literature, collective code ownership is often treated as a policy statem
 % & How well the code satisfies the project's desirable quality attributes affects the team's sense of ownership. When a product does not achieve an acceptable quality level, a developer may not want to be identified with the product and thus the self-identification motivation of psychological ownership is not being met. Low quality products also tend to involve a disproportionate amount of bug fixes. Developers need a balance between creating new features and fixing bugs each week. Working only on bugs for weeks affects their sense of ownership.
 % & Pressure to deliver and deprioritizing continuous refactoring
 % \\ \hline
-% Product Engagement
-% & Product engagement is believing that the product will satisfy the user's needs.
+% Product Fit
+% & Product fit is believing that the product will satisfy the user's needs.
 % & Engineers want to create products that matter to the user. Delivering a product that matters to someone satisfies the self-identity motivation of psychological ownership.
 % & Ignoring developers feedback about the product
 % \\ \hline
@@ -144,7 +184,6 @@ In the literature, collective code ownership is often treated as a policy statem
 % \end{tabular}
 % \end{table}
 % \end{landscape}
-% \end{sidewaystable}
 
 %\begin{figure}[t]
 %\centering
@@ -179,7 +218,9 @@ As team size grows, there is a potential risk of decreasing an individual develo
 \subsection{Code Contribution}
 \textbf{Definition:} Code contribution is the portion of the code that a given developer has worked on. 
 
-\textbf{Purpose:} Personally contributing to the code base increases a developer's sense of ownership by exercising \quotes{investing in the target} path of psychological ownership. As a developer works on the code base, the developer's system context level increases. While code contribution level influences the system context level, it is not necessary related: developers might learn about the code through other means different from direct contribution, including conversations at stand-up, impromptu team huddles, or a pair saying \participantQuote{Check out what we did yesterday.}
+\textbf{Purpose:} Personally contributing to the code base increases a developer's sense of ownership by exercising \quotes{investing in the target} path of psychological ownership. 
+
+As a developer works on the code base, the developer's system context level increases. While code contribution level influences the system context level, it is not necessary related: developers might learn about the code through other means different from direct contribution, including conversations at stand-up, impromptu team huddles, or a pair saying \participantQuote{Check out what we did yesterday.}
 
 \textbf{Threat: Inability to contribute.}  A developer's inability to contribute to the code base decreases the developer's sense of ownership. 
 
@@ -190,9 +231,11 @@ In one situation, the partner took over and ignored the participant's input. The
 Ideally, Pair Programming is a collaborative experience where both individuals are unable to tell who wrote which portions of the code. 
 
 \subsection{Code Quality}
-\textbf{Definition:} Code quality relates to how well the code satisfies the project's desirable quality attributes. Desirable quality attributes might include design qualities (e.g. conceptual integrity, maintainability, reusability, discoverability), run-time behavior (e.g. availability, interoperability, manageability, performance, reliability, scalability, security), system qualities (e.g. supportability, testability), and user qualities (e.g. usability) \cite{Meier2009}. 
+\textbf{Definition:} Code quality relates to how well the code satisfies the project's desirable quality attributes. Desirable quality attributes might include design qualities, performance, reliability, scalability, security,  testability, and usability \cite{Meier2009}. 
 
-\textbf{Purpose:} How well the code satisfies the project's desirable quality attributes affects the team's sense of ownership. When a product does not achieve an acceptable quality level, a developer may not want to be identified with the product and thus the self-identification motivation of psychological ownership is not being met. Low-quality products also tend to involve a disproportionate amount of bug fixes. Developers need a balance between creating new features and fixing bugs each week. Working only on bugs for weeks affects their sense of ownership.    
+\textbf{Purpose:} A high quality product satisfies the self-identity motivation of psychological ownership. Developers might not want to be identified with a low quality product.
+
+Low-quality products also tend to involve a disproportionate amount of bug fixes. Developers need a balance between creating new features and fixing bugs each week. Working only on bugs for weeks affects their sense of ownership.    
 
 \textbf{Threat: Pressure to deliver and deprioritizing continuous refactoring.} When developers are pressured to deliver more features at the expense of Continuous Refactoring, the code acquires technical debt, the code becomes harder to work with, and developers can begin to feel indifferent about the code. When developers begin to experience code apathy, this decreases their sense of team code ownership. 
 
@@ -213,16 +256,16 @@ When code apathy settles in, team members adopt the attitude that someone else w
 
 The team wants to feel \quotes{pride in improving code quality.}  It feels good to be improving the code design and readability. If the team starts neglecting these concerns, it can engender a sense of disgust and apathy for the code can spread throughout the team.
 
-\subsection{Product Engagement}
-\textbf{Definition:} Product engagement is developers believing that features of the product will satisfy the user's needs.
+\subsection{Product Fit}
+\textbf{Definition:} Product fit is developers believing that features of the product will satisfy the user's needs.
 
 \textbf{Purpose:} Engineers want to create products that matter to the user. Delivering a product that matters to someone satisfies the self-identity motivation of psychological ownership.
 
-\textbf{Threat: Ignoring user feedback.} When product ignores feedback from user research and usability testing, developers may perceive that certain features or the entire product might not satisfy the user's needs. Developer motivation and product engagement can decrease when developers perceive they are building a feature that users have explicitly said they do not want yet is implemented to solve a business goal. 
+\textbf{Threat: Ignoring user feedback.} When product ignores feedback from user research and usability testing, developers may perceive that certain features or the entire product might not satisfy the user's needs. Developer motivation and engagement can decrease when developers perceive they are building a feature that users have explicitly said they do not want yet is implemented to solve a business goal. 
 
-\textbf{Threat: Ignoring developers feedback about the product.} Product apathy occurs when a developer loses investment in the features of the product. Pivotal's balanced team approach is founded on collaboration between product managers, interaction designers, and developers. When product managers, or other stakeholders, ignore feedback from developers, developers can begin to feel less ownership in the product, and in turn, be less motivated to work on the project. 
+\textbf{Threat: Ignoring developers feedback about the product.} Pivotal's balanced team approach is founded on collaboration between product managers, interaction designers, and developers. When product managers, or other stakeholders, ignore feedback from developers, developers can begin to feel less ownership in the product, and in turn, be less motivated to work on the project. 
 
-When picking up a story, a developer verifies that the story contains clear acceptance criteria. In the absence of acceptance criteria, the developer typically clarifies what needs to be done with the product manager. On one project when the stakeholders were ignoring feedback from the developers, one developer recalled, \participantQuote{In this case, I don't feel like spending the extra energy to go and say, `Hey, are you sure? Is this what you want?'} 
+%When picking up a story, a developer verifies that the story contains clear acceptance criteria. In the absence of acceptance criteria, the developer typically clarifies what needs to be done with the product manager. On one project when the stakeholders were ignoring feedback from the developers, one developer recalled, \participantQuote{In this case, I don't feel like spending the extra energy to go and say, `Hey, are you sure? Is this what you want?'} 
 
 Feature apathy or product apathy can result in a poorly crafted product that does not meet the customer's needs.
 
@@ -252,15 +295,18 @@ Some developers effortlessly make the transition to team code ownership. They im
 
 Others may struggle with team code ownership for several reasons:
 
-\begin{itemize}  
+% \begin{itemize}  
+%\item 
+1) Developers may struggle to transition to a caretaker mindset.  In one interview, a software engineer struggled to describe the developer's relationship with the code on a very challenging project and settled in on the caretaker metaphor: \participantQuote{Sometimes I kind of feel like a janitor to [the code base].  Maybe caretaker would be better. Yeah, probably caretaker. I feel like a janitor just cleans up messes, but a caretaker makes things better.} 
 
-\item Developers may struggle to transition to a caretaker mindset.  In one interview, a software engineer struggled to describe the developer's relationship with the code on a very challenging project and settled in on the caretaker metaphor: \participantQuote{Sometimes I kind of feel like a janitor to [the code base].  Maybe caretaker would be better. Yeah, probably caretaker. I feel like a janitor just cleans up messes, but a caretaker makes things better.} 
+%\item 
+2) A developer may be distraught at \participantQuote{seeing my work slowly removed from the app.} 
 
-\item A developer may be distraught at \participantQuote{seeing my work slowly removed from the app.} 
+%\item 
+3) Developers can no longer take pride in functionality that they exclusively develop.
 
-\item Developers can no longer take pride in functionality that they exclusively develop.
-
-\item Existing knowledge silos, which hinder team code ownership, may be slow to break down.
+%\item 
+4) Existing knowledge silos, which hinder team code ownership, may be slow to break down.
  
 \end{itemize}
 
@@ -290,7 +336,7 @@ This paper reports results from a participant-observation, constructivist ground
 
 1) Our observations clearly indicate that \textbf{team code ownership is a feeling to be engendered not a policy to be decreed}.
 
-2) Meanwhile, both discussions with and observations of participants suggest five factors associated with strong feelings team code ownership. Pivotal developers more acutely feel team code ownership when 1) they understand the system context; 2) they contribute to the code in question; 3) they perceive code quality is high, 4) they engage with the product, and 5) they perceive team cohesion is high.   
+2) Meanwhile, both discussions with and observations of participants suggest five factors associated with strong feelings team code ownership. Pivotal developers more acutely feel team code ownership when 1) they understand the system context; 2) they contribute to the code in question; 3) they perceive code quality is high; 4) they perceive the product will satisfy the user needs; and 5) they perceive team cohesion is high.   
 
 3) Moreover, diverse events and trends can undermine sense of ownership, including:  increasing knowledge silos, increasing code base size, increasing team size, inability to contribute, pressure to deliver and deprioritizing continuous refactoring, ignoring user feedback, ignoring developers feedback on product, and distancing a developer from the team. 
 
