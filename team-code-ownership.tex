@@ -73,7 +73,7 @@
 \begin{document}
 
 % Copyright
-\setcopyright{acmcopyright}
+% \setcopyright{acmcopyright}
 %\setcopyright{acmlicensed}
 %\setcopyright{rightsretained}
 %\setcopyright{usgov}
@@ -81,20 +81,20 @@
 %\setcopyright{cagov}
 %\setcopyright{cagovmixed}
 
+% --- Author Metadata here ---
+% \conferenceinfo{WOODSTOCK}{'97 El Paso, Texas USA}
+%\CopyrightYear{2007} % Allows default copyright year (20XX) to be over-ridden - IF NEED BE.
+%\crdata{0-12345-67-8/90/01}  % Allows default copyright data (0-89791-88-6/97/05) to be over-ridden - IF NEED BE.
+% --- End of Author Metadata ---
+
 \CopyrightYear{2016} 
 \setcopyright{acmlicensed}
 \conferenceinfo{EASE '16,}{June 01 - 03, 2016, Limerick, Ireland}
 \isbn{978-1-4503-3691-8/16/06}\acmPrice{\$15.00}
 \doi{http://dx.doi.org/10.1145/2915970.2916002}
 
-%
-% --- Author Metadata here ---
-\conferenceinfo{WOODSTOCK}{'97 El Paso, Texas USA}
-%\CopyrightYear{2007} % Allows default copyright year (20XX) to be over-ridden - IF NEED BE.
-%\crdata{0-12345-67-8/90/01}  % Allows default copyright data (0-89791-88-6/97/05) to be over-ridden - IF NEED BE.
-% --- End of Author Metadata ---
 
-\title{ Practices and Perceptions of Team Code Ownership
+\title{ Practice and Perception of Team Code Ownership
 %Transitioning from \quotes{I Made This!} to \quotes{We Made This!}
 }
 
@@ -160,13 +160,13 @@
 \maketitle
 \begin{abstract}
 
-\textit{Context:} Team code ownership is a software development practice where any team member can modify any part of the team's code. However, many factors beyond official policy affect a developer's sense of ownership. 
+\textit{Context:} Team code ownership is a software development practice where any team member can modify any part of the team’s code. However, many factors beyond official policy affect a developer’s sense of ownership. 
 
 \textit{Objective:} The purpose of this paper is to understand the factors that affect a team's sense of code ownership.
 
 \textit{Method:} Following Constructivist Grounded Theory, the first author conducted participant-observation of several software development projects, and interviewed 21 software engineers, interaction designers, and product managers. Iterating between theoretical sampling and analysis continued until achieving theoretical saturation.
 
-\textit{Results:} Team code ownership is a feeling. Developers feel team code ownership more when they understand the system context; they contribute to the code in question; they perceive code quality is high; they perceive the product will satisfy the user needs; and they perceive high team cohesion.  
+\textit{Results:} Team code ownership is a feeling. Developers feel team code ownership more when they understand the system context, have contributed to the code in question, perceive code quality as high, believe the product will satisfy the user needs, and perceive high team cohesion.  
 
 \textit{Limitations:} Outcomes of grounded theory research are not statistically generalizable to defined populations, and may not apply to organizations with different software development cultures.
 
@@ -297,7 +297,9 @@ Sustainable software development
 % The following two commands are all you need in the
 % initial runs of your .tex file to
 % produce the bibliography for the citations in your paper.
-\bibliographystyle{abbrv}
+\bibliographystyle{abbrvurl}
+
+% \bibliographystyle{abbrv}
 \bibliography{bibliography}  % sigproc.bib is the name of the Bibliography in this case
 % You must have a proper ".bib" file
 %  and remember to run:
